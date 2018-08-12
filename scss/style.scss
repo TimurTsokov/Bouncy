@@ -1,0 +1,224 @@
+@import '_normalize';
+@import '_slick';
+
+
+$text-font: 'Open Sans', sans-serif;
+$text-source: 'Source Sans Pro', sans-serif;
+
+$text-color: #81868e;
+$text-color2: #333b46;
+
+
+$scroll: #19bd9a;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 10px;
+}
+
+body {
+  font: 400 1.4rem/1.6 $text-font;
+  min-height: 100%;
+  color: $text-color;
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.section{
+  height: 100vh;
+  &--bg{
+    color: #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.container{
+  width: 1170px;
+  margin: 0 auto;
+  &--title{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: $text-source;
+    letter-spacing: 5px;
+    font-size: 3.5rem;
+    &-color{
+      font-size: 2.0rem;
+      color: $text-color2;
+    }
+  }
+  &--subtitle{
+    text-align: center;
+    width: 630px;
+    font-size: 1.6rem;
+    &-color{
+      font-size: 1.4rem;
+      color: $text-color2;
+    }
+  }
+  &__scroll{
+    position: absolute;
+    background-color: $scroll;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    bottom: 70px;
+    display: inline-block;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    &:hover,
+    &:focus,
+    &:active{
+      background-color: #000000;
+    }
+  }
+  &--flex{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__nav{
+    font-size: 0;
+    padding: 2rem 0;
+    &-logo{
+      width: 180px;
+      display: inline-block;
+      vertical-align: middle;
+      img{
+        width: 100%;
+      }
+    }
+    &-menu{
+      padding: 0;
+      width: calc(100% - 180px);
+      font-size: 1.6rem;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: right;
+      li{
+        display: inline-block;
+        padding: 10px;
+        a{
+          color: #ffffff;
+          text-decoration: none;
+          display: inline-block;
+          padding: 10px 20px;
+          border-radius: 25px;
+          border: 2px solid transparent;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+          &:hover,
+          &:focus,
+          &:active{
+            border-color: #ffffff;
+          }
+        }
+        &.active a{
+          border-color: #ffffff;
+        }
+      }
+    }
+  }
+  &--switchers{
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 50px;
+    li{
+      display: inline-block;
+      a{
+        color: #464646;
+        font-size: 1.6rem;
+        text-decoration: none;
+        padding: 5px 15px;
+        position: relative;
+        &:hover:after,
+        &:focus:after,
+        &:active:after{
+          content: '';
+          background-color: $scroll;
+          position: absolute;
+          width: 40px;
+          height: 2px;
+          bottom: -5px;
+          left: 50%;
+          transform: translate(-50%,0);
+        }
+      }
+      &.active a:after{
+        content: '';
+        background-color: $scroll;
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        bottom: -5px;
+        left: 50%;
+        transform: translate(-50%,0);
+      }
+    }
+  }
+  &--images{
+    font-size: 0;
+    width: 100%;
+    margin-top: 30px;
+    .image-sizer {
+      width: 1%;
+    }
+    .gutter-sizer {
+      width: 2%;
+    }
+    &-image{
+      width: 31%;
+      //padding-top: 38%;
+      //position: relative;
+      /*height: 305px;*/
+      margin-bottom: 40px;
+      //overflow: hidden;
+      border-radius: 8px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__slider{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    &-text{
+      width: 370px;
+      &--title{
+        text-align: right;
+        h3{
+          margin: 0;
+          font-size: 2rem;
+        }
+        span{
+          display: block;
+          font-family: $text-source;
+          margin-bottom: 20px;
+          font-size: 1.4rem;
+        }
+
+      }
+      &--subtitle{
+        text-align: right;
+      }
+    }
+
+  }
+ }
+
+
