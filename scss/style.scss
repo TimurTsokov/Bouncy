@@ -73,13 +73,17 @@ header{
     bottom: 70px;
     display: inline-block;
     img{
-      width: 100%;
-      height: 100%;
+      width: 12px;
+      height: 7px;
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translate(-50%,0);
     }
     &:hover,
     &:focus,
     &:active{
-      background-color: #000000;
+      transform: scale(1.2);
     }
   }
   &--flex{
@@ -179,15 +183,10 @@ header{
       width: 2%;
     }
     &-image{
-      width: 31%;
-      //padding-top: 38%;
-      //position: relative;
-      /*height: 305px;*/
-      margin-bottom: 40px;
-      //overflow: hidden;
-      border-radius: 8px;
+      width: 23%;
+      margin-bottom: 10px;
       img {
-        width: 100%;
+        width: 270px;
       }
     }
   }
