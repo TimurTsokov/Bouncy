@@ -282,6 +282,7 @@ header {
       border-radius: 20px;
       border: 1px solid #ffffff;
       padding: 10px 25px;
+      transition: all .3s ease-in-out;
       &:hover,
       &:focus,
       &:active {
