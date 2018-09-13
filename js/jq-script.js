@@ -31,15 +31,6 @@
             fade: true,
             easing: 'ease-in'
         });
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > '600') {
-                $('header').css({"background-color": "rgba(25, 189, 154, 0.7)"});
-                $('.container__nav').css({"padding": "0"})
-            } else if ($(window).scrollTop() < '600') {
-                $('header').css({"background-color": "transparent"});
-                $('.container__nav').css({"padding": "2rem 0"})
-            }
-        })
     });
 var map, marker, infoWindow, // Подключение карты
     center = {
